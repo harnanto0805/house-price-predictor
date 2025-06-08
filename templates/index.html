@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediksi Harga Rumah</title>
+  </head>
+  <body>
+    <h1>Prediksi Harga Rumah</h1>
+    <form method="POST">
+      <label>Ukuran Rumah (m²):</label><br />
+      <input type="number" name="ukuran" required /><br /><br />
+
+      <label>Jumlah Kamar Tidur:</label><br />
+      <input type="number" name="kamar" required /><br /><br />
+
+      <label>Lokasi:</label><br />
+      <select name="lokasi" required>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Depok">Depok</option>
+        <option value="Bogor">Bogor</option></select
+      ><br /><br />
+
+      <input type="submit" value="Prediksi" />
+    </form>
+
+    {% if prediksi %}
+    <h3>Prediksi Harga: Rp {{ prediksi:, }}</h3>
+    {% endif %}
+  </body>
+</html>
